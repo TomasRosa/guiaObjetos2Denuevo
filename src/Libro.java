@@ -19,7 +19,15 @@ public class Libro
         this.precio = precio;
         this.titulo = titulo;
         this.stock = stock;
+        this.autores = new Autor[10];
         this.autor = autor;
+        this.validosAutores = 0;
+    }
+    public Libro (String titulo, double precio,int stock)
+    {
+        this.precio = precio;
+        this.titulo = titulo;
+        this.stock = stock;
         this.autores = new Autor[10];
         this.validosAutores = 0;
     }
@@ -27,6 +35,16 @@ public class Libro
     public String getTitulo()
     {
         return titulo;
+    }
+
+    public Autor[] getAutores()
+    {
+        return autores;
+    }
+
+    public void setAutores(Autor[] autores)
+    {
+        this.autores = autores;
     }
 
     public void setTitulo(String titulo)
@@ -74,6 +92,13 @@ public class Libro
     public void mostrarAlgunosAtributos ()
     {
         System.out.println("El libro: " + getTitulo() + " de: " + getAutor().getNombre() + "." + "Se vende a: " + getPrecio() + " pesos.");
+    }
+    public void mostrarAlgunosAtributosArray ()
+    {
+        for(int i = 0; i < this.validosAutores; i++)
+        {
+            System.out.println("El libro: " + getTitulo() + " de: " + autores[i].getNombre() + "." + "Se vende a: " + getPrecio() + " pesos.");
+        }
     }
     public void cargarUnArregloDeAutores (Autor[] arregloAutores, int dimension)
     {
