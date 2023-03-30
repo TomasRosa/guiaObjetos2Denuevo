@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import java.util.UUID;
 public class clienteBanco
 {
@@ -51,4 +52,5 @@ public class clienteBanco
         System.out.println("El nombre del cliente es: " + this.nombre);
         System.out.println("El genero del cliente es: " + this.genero);
     }
+
 }
